@@ -27,7 +27,12 @@ SECRET_KEY = 'django-insecure-8ou08xuyvgts6sf5fgkw%g99we)#10390m$cw375zsa6r+my&w
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+import os
+CODESPACE_NAME = os.environ.get('CODESPACE_NAME')
+if CODESPACE_NAME:
+    ALLOWED_HOSTS = [f'{CODESPACE_NAME}-8000.app.github.dev']
+else:
+    ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -92,7 +97,16 @@ DATABASES = {
     }
 }
 # CORS settings
-CORS_ALLOW_ALL_ORIGINS = True
+import os
+CODESPACE_NAME = os.environ.get('CODESPACE_NAME')
+if CODESPACE_NAME:
+    CORS_ALLOWED_ORIGINS = [
+        f"https://{CODESPACE_NAME}-3000.app.github.dev",
+    ]
+    CORS_ALLOW_ALL_ORIGINS = False
+else:
+    CORS_ALLOW_ALL_ORIGINS = True
+
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_HEADERS = ['*']
 CORS_ALLOW_METHODS = ['*']
