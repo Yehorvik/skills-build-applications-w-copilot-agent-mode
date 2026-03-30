@@ -25,3 +25,5 @@ class WorkoutAdmin(admin.ModelAdmin):
 class LeaderboardAdmin(admin.ModelAdmin):
     list_display = ('team', 'points')
     search_fields = ('team__name',)
+
+
