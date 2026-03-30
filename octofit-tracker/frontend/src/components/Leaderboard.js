@@ -46,26 +46,25 @@ function Leaderboard() {
                   <thead className="table-dark">
                     <tr>
                       <th scope="col">Rank</th>
-                      <th scope="col">User</th>
-                      <th scope="col">Total Activities</th>
-                      <th scope="col">Total Calories</th>
-                      <th scope="col">Total Duration (min)</th>
+                      <th scope="col">Team</th>
                       <th scope="col">Points</th>
+                      <th scope="col">Actions</th>
                     </tr>
                   </thead>
                   <tbody>
                     {leaderboard.map((entry, index) => (
-                      <tr key={entry.user_id}>
+                      <tr key={entry.id}>
                         <td>
                           <span className={`badge ${index === 0 ? 'bg-warning' : index === 1 ? 'bg-secondary' : index === 2 ? 'bg-danger' : 'bg-light text-dark'}`}>
                             {index + 1}
                           </span>
                         </td>
-                        <td>{entry.user}</td>
-                        <td>{entry.total_activities}</td>
-                        <td>{entry.total_calories}</td>
-                        <td>{entry.total_duration}</td>
+                        <td>{entry.team.name}</td>
                         <td><strong>{entry.points}</strong></td>
+                        <td>
+                          <button className="btn btn-primary btn-sm me-2">Edit</button>
+                          <button className="btn btn-danger btn-sm">Delete</button>
+                        </td>
                       </tr>
                     ))}
                   </tbody>

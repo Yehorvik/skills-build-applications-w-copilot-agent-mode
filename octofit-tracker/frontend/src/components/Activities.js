@@ -46,11 +46,10 @@ function Activities() {
                   <thead className="table-dark">
                     <tr>
                       <th scope="col">ID</th>
-                      <th scope="col">Name</th>
-                      <th scope="col">Description</th>
+                      <th scope="col">User</th>
+                      <th scope="col">Type</th>
                       <th scope="col">Duration (min)</th>
-                      <th scope="col">Calories Burned</th>
-                      <th scope="col">Date</th>
+                      <th scope="col">Calories</th>
                       <th scope="col">Actions</th>
                     </tr>
                   </thead>
@@ -58,11 +57,10 @@ function Activities() {
                     {activities.map(activity => (
                       <tr key={activity.id}>
                         <td>{activity.id}</td>
-                        <td>{activity.name}</td>
-                        <td>{activity.description}</td>
+                        <td>{activity.user.username} ({activity.user.email})</td>
+                        <td>{activity.type}</td>
                         <td>{activity.duration}</td>
-                        <td>{activity.calories_burned}</td>
-                        <td>{new Date(activity.date).toLocaleDateString()}</td>
+                        <td>{activity.calories}</td>
                         <td>
                           <button className="btn btn-primary btn-sm me-2">Edit</button>
                           <button className="btn btn-danger btn-sm">Delete</button>

@@ -11,7 +11,7 @@ class UserSerializer(serializers.ModelSerializer):
     team_id = serializers.PrimaryKeyRelatedField(queryset=Team.objects.all(), source='team', write_only=True, required=False)
     class Meta:
         model = User
-        fields = ['id', 'username', 'email', 'team', 'team_id']
+        fields = ['id', 'username', 'email', 'first_name', 'last_name', 'team', 'team_id']
 
 class ActivitySerializer(serializers.ModelSerializer):
     user = UserSerializer(read_only=True)

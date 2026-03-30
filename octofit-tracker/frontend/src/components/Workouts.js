@@ -48,9 +48,7 @@ function Workouts() {
                       <th scope="col">ID</th>
                       <th scope="col">Name</th>
                       <th scope="col">Description</th>
-                      <th scope="col">Exercises</th>
                       <th scope="col">Duration (min)</th>
-                      <th scope="col">Difficulty</th>
                       <th scope="col">Actions</th>
                     </tr>
                   </thead>
@@ -60,13 +58,7 @@ function Workouts() {
                         <td>{workout.id}</td>
                         <td>{workout.name}</td>
                         <td>{workout.description}</td>
-                        <td>{workout.exercises ? workout.exercises.length : 0}</td>
                         <td>{workout.duration}</td>
-                        <td>
-                          <span className={`badge ${workout.difficulty === 'Beginner' ? 'bg-success' : workout.difficulty === 'Intermediate' ? 'bg-warning' : 'bg-danger'}`}>
-                            {workout.difficulty}
-                          </span>
-                        </td>
                         <td>
                           <button className="btn btn-primary btn-sm me-2">Edit</button>
                           <button className="btn btn-danger btn-sm">Delete</button>

@@ -47,8 +47,6 @@ function Teams() {
                     <tr>
                       <th scope="col">ID</th>
                       <th scope="col">Name</th>
-                      <th scope="col">Description</th>
-                      <th scope="col">Members</th>
                       <th scope="col">Actions</th>
                     </tr>
                   </thead>
@@ -57,8 +55,6 @@ function Teams() {
                       <tr key={team.id}>
                         <td>{team.id}</td>
                         <td>{team.name}</td>
-                        <td>{team.description}</td>
-                        <td>{team.members ? team.members.length : 0}</td>
                         <td>
                           <button className="btn btn-primary btn-sm me-2">Edit</button>
                           <button className="btn btn-danger btn-sm">Delete</button>
