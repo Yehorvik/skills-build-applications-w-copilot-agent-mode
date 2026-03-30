@@ -1,0 +1,211 @@
+/* App container with gradient background */
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #333;
+}
+
+/* Custom styles to complement Bootstrap */
+.navbar-brand h3 {
+  color: #fff;
+  margin-left: 10px;
+}
+
+.navbar-brand img {
+  height: 40px;
+  width: auto;
+}
+
+/* Enhanced navbar with fitness theme */
+.navbar {
+  background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%) !important;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar-nav .nav-link {
+  color: #fff !important;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffeaa7 !important;
+}
+
+/* Card styling with subtle colors */
+.card {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.card-header {
+  background: linear-gradient(90deg, #a8edea 0%, #fed6e3 100%);
+  border-bottom: none;
+  color: #333;
+}
+
+.card-title {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+/* Table styling with colors */
+.table {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.table th {
+  border-top: none;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-weight: 600;
+  border: none;
+}
+
+.table td {
+  border-color: rgba(74, 144, 226, 0.2);
+  color: #555;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background: rgba(168, 237, 234, 0.1);
+}
+
+.table-hover tbody tr:hover {
+  background: rgba(254, 214, 227, 0.2);
+  transform: scale(1.01);
+  transition: all 0.2s ease;
+}
+
+.table-responsive {
+  border-radius: 0.375rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Button styling with fitness colors */
+.btn-primary {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  border: none;
+  color: white;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(45deg, #764ba2, #667eea);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+.btn-danger {
+  background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+  border: none;
+  color: white;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+}
+
+.btn-danger:hover {
+  background: linear-gradient(45deg, #ee5a24, #ff6b6b);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 107, 107, 0.6);
+}
+
+.btn {
+  border-radius: 0.375rem;
+}
+
+/* Heading colors */
+h1, h2, h3, h4, h5, h6 {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.display-4 {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Link colors */
+.nav-link {
+  color: #667eea !important;
+}
+
+.nav-link:hover {
+  color: #764ba2 !important;
+}
+
+/* Badge colors */
+.badge {
+  font-size: 0.75em;
+}
+
+.badge.bg-success {
+  background: linear-gradient(45deg, #00b894, #00cec9) !important;
+}
+
+.badge.bg-warning {
+  background: linear-gradient(45deg, #fdcb6e, #e17055) !important;
+}
+
+.badge.bg-danger {
+  background: linear-gradient(45deg, #e17055, #d63031) !important;
+}
+
+/* Alert colors */
+.alert-danger {
+  background: rgba(255, 107, 107, 0.1);
+  border-color: rgba(255, 107, 107, 0.3);
+  color: #c44569;
+}
+
+/* Spinner colors */
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+  color: #667eea;
+}
+
+/* Footer styles */
+footer {
+  margin-top: auto;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+}
+
+/* Welcome page specific styling */
+.card-body .card {
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  transition: transform 0.3s ease;
+}
+
+.card-body .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .card-body .row .col-md-4 {
+    margin-bottom: 1rem;
+  }
+
+  .App {
+    background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+  }
+}
